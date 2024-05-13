@@ -1,0 +1,5 @@
+/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/Zork.dir
+/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/Zork_autogen_timestamp_deps.dir
+/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/Zork_autogen.dir

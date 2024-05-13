@@ -1,0 +1,9 @@
+# ninja log v5
+11	36	1715269721879711169	Zork_autogen/timestamp	66653f908c0537d9
+36	271	1715269722112643914	CMakeFiles/Zork.dir/Room.cpp.o	2ac03c2504688056
+11	36	1715269721879711169	Zork_autogen/mocs_compilation.cpp	66653f908c0537d9
+34	52	1715268827767616157	CMakeFiles/Zork.dir/Zork_autogen/mocs_compilation.cpp.o	75f70611a6d9673a
+35	469	1715268828181074810	CMakeFiles/Zork.dir/main.cpp.o	f95c2cbb0874ba26
+11	36	1715269721879711169	/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/Zork_autogen/mocs_compilation.cpp	66653f908c0537d9
+11	36	1715269721879711169	/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/Zork_autogen/timestamp	66653f908c0537d9
+271	306	1715269722148199269	Zork	dc735d603b5ab158
