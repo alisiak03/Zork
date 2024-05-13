@@ -43,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Zork::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Zork-Debug-f10c404513797c0f4105.json",
+					"jsonFile" : "target-Zork-Debug-bfcf4fc407f7981396ed.json",
 					"name" : "Zork",
 					"projectIndex" : 0
 				},
@@ -67,8 +67,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug",
-		"source" : "/Users/alisiakazimierek/CLionProjects/Zork"
+		"build" : "/Users/alisiakazimierek/MyRepos/Zork/cmake-build-debug",
+		"source" : "/Users/alisiakazimierek/MyRepos/Zork"
 	},
 	"version" : 
 	{

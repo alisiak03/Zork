@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug"
+			"value" : "/Users/alisiakazimierek/MyRepos/Zork/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/alisiakazimierek/MyRepos/Zork/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/alisiakazimierek/CLionProjects/Zork"
+			"value" : "/Users/alisiakazimierek/MyRepos/Zork"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/alisiakazimierek/CLionProjects/Zork/cmake-build-debug"
+			"value" : "/Users/alisiakazimierek/MyRepos/Zork/cmake-build-debug"
 		},
 		{
 			"name" : "Zork_IS_TOP_LEVEL",
@@ -1199,7 +1199,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/alisiakazimierek/CLionProjects/Zork"
+			"value" : "/Users/alisiakazimierek/MyRepos/Zork"
 		}
 	],
 	"kind" : "cache",
