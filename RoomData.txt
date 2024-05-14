@@ -5,4 +5,4 @@ Hall(upstairs) : a cat sits on the top of the stairs : Library , Dining room , B
 Library : old books cover the shelves : Attic , Hall(upstairs)
 Bedroom : A window is wide open : Hall(upstairs)
 Attic : A ghost is crying : Library
-
+Basement : A crow bar is on the floor : Hall(downstairs)

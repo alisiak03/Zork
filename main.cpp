@@ -1,11 +1,11 @@
 #include <QApplication>
 #include <QPushButton>
+#include "Room.h"
 
-int main(int argc, char *argv[]) {
-
-
+int main() {
+Room room;
+room.roomInfo();
+return 0;
 }
 
-main::main(){
-    createRooms();
-}
+
