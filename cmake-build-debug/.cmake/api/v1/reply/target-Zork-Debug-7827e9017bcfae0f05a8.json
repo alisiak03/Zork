@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 20,
+				"line" : 22,
 				"parent" : 0
 			}
 		]
@@ -115,18 +115,19 @@
 			[
 				0,
 				1,
-				2
+				2,
+				5
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "Zork_autogen::@6890427a1f51a3e7e1df"
+			"id" : "Zork_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Zork_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Zork_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Zork::@6890427a1f51a3e7e1df",
@@ -179,7 +180,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				5
 			]
 		},
 		{
@@ -187,21 +189,22 @@
 			"sourceIndexes" : 
 			[
 				3,
-				4
+				4,
+				6
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				5
+				7
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				6
+				8
 			]
 		}
 	],
@@ -234,6 +237,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "main.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "RoomNav.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "RoomNav.h",
 			"sourceGroupIndex" : 1
 		},
 		{

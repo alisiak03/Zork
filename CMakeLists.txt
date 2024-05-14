@@ -16,7 +16,9 @@ find_package(Qt5 COMPONENTS
 add_executable(Zork main.cpp
         Room.cpp
         Room.h
-        main.h)
+        main.h
+        RoomNav.cpp
+        RoomNav.h)
 target_link_libraries(Zork
         Qt5::Core
         Qt5::Gui
