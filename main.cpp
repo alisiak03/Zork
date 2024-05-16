@@ -6,6 +6,7 @@ int main() {
 Room room;
 room.roomInfo();
 return 0;
+
 }
 
 

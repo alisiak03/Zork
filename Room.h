@@ -19,6 +19,6 @@ private :
 
 public:
     void roomInfo();
-
+    static vector<string> roomNames;
 };
 #endif //ZORK_ROOM_H

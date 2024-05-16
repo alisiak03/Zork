@@ -100,6 +100,8 @@ Zork_autogen/timestamp: \
   /Users/alisiakazimierek/MyRepos/Zork/CMakeLists.txt \
   /Users/alisiakazimierek/MyRepos/Zork/Room.cpp \
   /Users/alisiakazimierek/MyRepos/Zork/Room.h \
+  /Users/alisiakazimierek/MyRepos/Zork/RoomNav.cpp \
+  /Users/alisiakazimierek/MyRepos/Zork/RoomNav.h \
   CMakeFiles/3.28.1/CMakeCCompiler.cmake \
   CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.1/CMakeSystem.cmake \

@@ -3,6 +3,7 @@
 //
 
 #include "Room.h"
+vector<string> Room::roomNames;
 
 void Room :: roomInfo(){
     const int size = 8;
@@ -13,18 +14,18 @@ void Room :: roomInfo(){
         cerr << "Failed to open file for reading.\n";
         return ;
     }
+    for (int i = 0; i < size; ++i) {
+        //rooms
+        getline(infile >> ws, arr[i].name, ':');
+        getline(infile >> ws, arr[i].description, ':');
 
-        for (int i = 0; i < size; ++i) {
-            //rooms
-            getline(infile >> ws, arr[i].name, ':');
-            getline(infile >> ws, arr[i].description, ':');
+        string exitsLine;
+        getline(infile >> ws, exitsLine);
+        stringstream ss(exitsLine);
+        string exit;
+        while (getline(ss, exit, ',')) {
+            arr[i].exits.push_back(exit);
 
-            string exitsLine;
-            getline(infile >> ws, exitsLine);
-            stringstream ss(exitsLine);
-            string exit;
-            while (getline(ss, exit, ',')) {
-                arr[i].exits.push_back(exit);
             }
         }
 
