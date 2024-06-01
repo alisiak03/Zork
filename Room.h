@@ -16,9 +16,11 @@ private :
     string name;
     string description;
     vector<string> exits;
+    static vector<Room> rooms;
 
 public:
+    Room();
     void roomInfo();
-    static vector<string> roomNames;
+    static const vector<Room>& getRooms();
 };
 #endif //ZORK_ROOM_H
