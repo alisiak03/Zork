@@ -10,6 +10,19 @@
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav) {
     ui->setupUi(this);
+
+    ui->button1->setStyleSheet(
+            "QPushButton {"
+            "background-color: #FFD700;"
+            "border: 2px solid #000;"
+            "}"
+            );
+    ui->button2->setStyleSheet(
+            "QPushButton {"
+            "background-color: #FFD700;"
+            "border: 2px solid #000;"
+            "}"
+    );
     updateRoom();
 
     connect(ui->button1, &QPushButton::clicked, this, &MainWindow::handleButton1Clicked);
