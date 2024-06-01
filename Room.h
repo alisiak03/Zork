@@ -4,23 +4,15 @@
 
 #ifndef ZORK_ROOM_H
 #define ZORK_ROOM_H
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <sstream>
+#include <QString>
 using namespace std;
 
 class Room {
 private :
-    string name;
-    string description;
-    vector<string> exits;
-    static vector<Room> rooms;
+    QString imagePath;
 
 public:
-    Room();
-    void roomInfo();
-    static const vector<Room>& getRooms();
+    Room(const QString& imagePath);
+    QString getImagePath() const;
 };
 #endif //ZORK_ROOM_H

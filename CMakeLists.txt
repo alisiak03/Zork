@@ -18,7 +18,13 @@ add_executable(Zork main.cpp
         Room.h
         main.h
         RoomNav.cpp
-        RoomNav.h)
+        RoomNav.h
+        MainWindow.cpp
+        MainWindow.h
+        MainWindow.ui
+        MainWindow.cpp
+        MainWindow.h
+        MainWindow.ui)
 target_link_libraries(Zork
         Qt5::Core
         Qt5::Gui

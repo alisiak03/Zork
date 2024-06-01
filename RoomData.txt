@@ -1,8 +1,0 @@
-Hall(downstairs): The floor-boards creak : Dining room , Basement
-Dining room : A rabbit hops along the table : Kitchen , Hall(downstairs), Hall(upstairs)
-Kitchen: A hotdog is ready to be eaten : Dining room
-Hall(upstairs) : a cat sits on the top of the stairs : Library , Dining room , Bedroom
-Library : old books cover the shelves : Attic , Hall(upstairs)
-Bedroom : A window is wide open : Hall(upstairs)
-Attic : A ghost is crying : Library
-Basement : A crow bar is on the floor : Hall(downstairs)

@@ -5,9 +5,18 @@
 #ifndef ZORK_ROOMNAV_H
 #define ZORK_ROOMNAV_H
 #include "Room.h"
+#include <QMap>
+#include<QString>
 
 class RoomNav {
+public:
+    RoomNav();
+    Room* getCurrentRoom() const;
+    void goToRoom(const QString &direction);
 
+private:
+    QMap<QString, Room*> rooms;
+    Room* currentRoom;
 };
 
 

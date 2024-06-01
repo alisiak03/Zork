@@ -4,8 +4,14 @@
 
 #ifndef ZORK_MAIN_H
 #define ZORK_MAIN_H
+#include <QMainWindow>
+#include "RoomNav.h"
 
-class main {
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class main : public Q {
 private:
 
 public:
