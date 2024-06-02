@@ -7,6 +7,7 @@
 
 #include <QMainWindow>
 #include "RoomNav.h"
+#include "TextAnimation.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -24,11 +25,17 @@ public:
 private slots:
     void handleButton1Clicked();
     void handleButton2Clicked();
+    void handleStartButtonClicked();
+
 private:
     Ui::MainWindow *ui;
     RoomNav *roomNav;
+    TextAnimation *textAnimator;
+
     void updateRoom();
     void updateButtons();
+    void initialiseIntro();
+
 };
 
 

@@ -10,9 +10,11 @@ using namespace std;
 class Room {
 private :
     QString imagePath;
+    QString name;
 
 public:
-    Room(const QString& imagePath);
+    Room(const QString &name, const QString& imagePath);
     QString getImagePath() const;
+    QString getName() const;
 };
 #endif //ZORK_ROOM_H
