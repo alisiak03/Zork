@@ -32,6 +32,7 @@ private:
 
     void saveInventory();
     void loadInventory();
+    void resetInventory();
 
 };
 

@@ -9,7 +9,7 @@
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this))
+        : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this)), exitButton(new QPushButton("Exit Game", this))
 { qDebug() << "MainWindow constructor called";
 
     ui->setupUi(this);
@@ -43,11 +43,14 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->button2, &QPushButton::clicked, this, &MainWindow::handleButton2Clicked);
     connect(ui->startButton, &QPushButton::clicked, this, &MainWindow::handleStartButtonClicked);
     connect(ui->quizButton, &QPushButton::clicked, this, &MainWindow::handleQuizButtonClicked);
+    connect(exitButton, &QPushButton::clicked, this, &MainWindow::handleExitButtonClicked);
+    exitButton->hide();
 }
 
 MainWindow::~MainWindow() {
     delete ui;
     delete roomNav;
+    delete exitButton;
 }
 
 void MainWindow::initialiseIntro() {
@@ -101,6 +104,10 @@ void MainWindow::handleQuizButtonClicked() {
     delete quiz; //deleting dialog to free memory (tryna think of memory management)
 }
 
+void MainWindow::handleExitButtonClicked() {
+    QApplication::quit();
+}
+
 void MainWindow::updateRoom() {
 
     qDebug() << "Updating room";
@@ -114,6 +121,12 @@ void MainWindow::updateRoom() {
     }else{
         ui->quizButton->hide();
         textAnimator->stopAnimation();
+    }
+    if(roomNav->getCurrentRoom()->getName() =="Won"){
+        exitButton->setGeometry(300,400,100,50);
+        exitButton->show();
+    }else{
+        exitButton->hide();
     }
 }
 

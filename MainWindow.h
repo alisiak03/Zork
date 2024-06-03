@@ -30,12 +30,14 @@ private slots:
     void handleButton2Clicked();
     void handleStartButtonClicked();
     void handleQuizButtonClicked();
+    void handleExitButtonClicked();
 
 protected:
     Ui::MainWindow *ui;
     RoomNav *roomNav;
     TextAnimation *textAnimator;
     Quiz *quiz;
+    QPushButton *exitButton;
 
     virtual void updateRoom();
     virtual void updateButtons();

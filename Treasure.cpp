@@ -21,20 +21,22 @@ Treasure::Treasure(QWidget *parent)
     connect(keyLabel, &ClickableLabel::clicked, this, &Treasure::handleKeyClicked);
     connect(bagLabel, &ClickableLabel::clicked, this, &Treasure::handleBagClicked);
 
-    loadInventory();
+    resetInventory();
 }
 
 Treasure::~Treasure() {
     delete treasureChestLabel;
     delete keyLabel;
     delete bagLabel;
-    saveInventory();
+
 }
 
 void Treasure::handleTreasureChestClicked() {
     if(inventory.hasItem("key")){
     QMessageBox::information(this, "Treasure Chest", "You opened the treasure chest!");
-}else{
+    roomNav->goToRoom("Won");
+    updateRoom();
+    }else{
     QMessageBox::information(this, "Treasure Chest", "You need a key to open this! ");
     }
 }
@@ -55,7 +57,7 @@ void Treasure::handleBagClicked() {
     if(items.isEmpty()){
         QMessageBox::information(this,"Inventory", "Your bag is empty");
     }else{
-        QMessageBox::information(this, "Inventory", "You have the follwoing items in your bag: \n" + items.join(","));
+        QMessageBox::information(this, "Inventory", "You have the following items in your bag: \n" + items.join(","));
     }
 }
 
@@ -79,12 +81,23 @@ void Treasure::updateRoom() {
     if(roomNav->getCurrentRoom()->getName() != "treasureRoom" && roomNav->getCurrentRoom()->getName() != "captainRoom"){
         bagLabel->hide();
     }
+    if(roomNav->getCurrentRoom()->getName() == "Won"){
+        exitButton->setGeometry(300,400,100,50);
+        exitButton->show();
+    }else{
+        exitButton->hide();
+    }
 }
 
-void Treasure::saveInventory() {
-    inventory.saveToFile("/Users/alisiakazimierek/MyRepos/Zork/InventoryBag.txt");
+void Treasure::resetInventory() {
+    inventory = Inventory<QString>();
+    saveInventory();
 }
 
 void Treasure::loadInventory() {
     inventory.loadFromFile("/Users/alisiakazimierek/MyRepos/Zork/InventoryBag.txt");
+}
+
+void Treasure::saveInventory() {
+    inventory.saveToFile("/Users/alisiakazimierek/MyRepos/Zork/InventoryBag.txt");
 }
