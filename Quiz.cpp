@@ -47,7 +47,7 @@ void Quiz::handleAnswer(int index) {
     if (index == correctIndex) {
         resultLabel->setText("Correct! Congratulations!");
         retryButton->hide();
-        QMessageBox::information(this, "Congratulations!", "You picked the right answer");
+        QMessageBox::information(this, "Congratulations!", "You picked the right answer and are freed from jail. Your next task is to get the treasure ");
         accept();
     } else {
         resultLabel->setText("Wrong! Are you sure your a pirate? Try again");

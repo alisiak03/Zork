@@ -11,6 +11,7 @@
 #include "Quiz.h"
 
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -21,7 +22,7 @@ Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 
-    ~MainWindow() override;
+    virtual ~MainWindow(); //destructor virtual for inheritance
 
 private slots:
     void handleButton1Clicked();
@@ -29,15 +30,15 @@ private slots:
     void handleStartButtonClicked();
     void handleQuizButtonClicked();
 
-private:
+protected:
     Ui::MainWindow *ui;
     RoomNav *roomNav;
     TextAnimation *textAnimator;
     Quiz *quiz;
 
-    void updateRoom();
-    void updateButtons();
-    void initialiseIntro();
+    virtual void updateRoom();
+    virtual void updateButtons();
+    virtual void initialiseIntro();
 
 };
 

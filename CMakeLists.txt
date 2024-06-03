@@ -28,7 +28,11 @@ add_executable(Zork main.cpp
         TextAnimation.cpp
         TextAnimation.h
         Quiz.cpp
-        Quiz.h)
+        Quiz.h
+        Treasure.cpp
+        Treasure.h
+        ClickableLabel.cpp
+        ClickableLabel.h)
 target_link_libraries(Zork
         Qt5::Core
         Qt5::Gui

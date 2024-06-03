@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QStringList>
 #include <QMessageBox>
+
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this))
 { qDebug() << "MainWindow constructor called";
