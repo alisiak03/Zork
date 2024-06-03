@@ -17,12 +17,13 @@ public:
 
 private slots:
     void handleTreasureChestClicked();
-
+    void handleKeyClicked();
 protected:
     void updateRoom() override; //to add treasure chest
 
 private:
     ClickableLabel* treasureChestLabel;
+    ClickableLabel* keyLabel;
 
 };
 
