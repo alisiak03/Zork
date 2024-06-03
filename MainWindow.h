@@ -8,6 +8,7 @@
 #include <QMainWindow>
 #include "RoomNav.h"
 #include "TextAnimation.h"
+#include "Quiz.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -26,11 +27,13 @@ private slots:
     void handleButton1Clicked();
     void handleButton2Clicked();
     void handleStartButtonClicked();
+    void handleQuizButtonClicked();
 
 private:
     Ui::MainWindow *ui;
     RoomNav *roomNav;
     TextAnimation *textAnimator;
+    Quiz *quiz;
 
     void updateRoom();
     void updateButtons();

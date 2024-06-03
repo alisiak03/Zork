@@ -26,7 +26,9 @@ add_executable(Zork main.cpp
         MainWindow.h
         MainWindow.ui
         TextAnimation.cpp
-        TextAnimation.h)
+        TextAnimation.h
+        Quiz.cpp
+        Quiz.h)
 target_link_libraries(Zork
         Qt5::Core
         Qt5::Gui
