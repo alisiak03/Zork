@@ -7,6 +7,7 @@
 #include "MainWindow.h"
 #include <QMessageBox>
 #include "ClickableLabel.h"
+#include "Inventory.h"
 
 class Treasure : public MainWindow {
     Q_OBJECT
@@ -18,12 +19,19 @@ public:
 private slots:
     void handleTreasureChestClicked();
     void handleKeyClicked();
+    void handleBagClicked();
+
 protected:
     void updateRoom() override; //to add treasure chest
 
 private:
     ClickableLabel* treasureChestLabel;
     ClickableLabel* keyLabel;
+    ClickableLabel* bagLabel;
+    Inventory<QString> inventory;
+
+    void saveInventory();
+    void loadInventory();
 
 };
 

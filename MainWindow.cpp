@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->quizButton->setStyleSheet(
             "QPushButton {"
-            "back-ground-color: #6FB572 "
+            "background-color: #6FB572 "
             "border: 2px solid #000;"
             "border-radius: 15px;"
             "}"
