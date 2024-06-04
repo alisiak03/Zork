@@ -15,6 +15,14 @@ Q_OBJECT
 public:
     Quiz(const QString &question, const QStringList &answers, int correctIndex, QWidget *parent = nullptr);
     ~Quiz();
+    // Copy constructor (deep copy)
+    Quiz(const Quiz &other);
+
+    Quiz& operator =(const Quiz &other);
+
+    // Shallow copy constructor
+    Quiz(Quiz &&other) noexcept;
+    Quiz& operator = (Quiz &&other) noexcept;
 
 private slots:
     void handleAnswer(int index);
@@ -29,6 +37,7 @@ private:
     QPushButton **answerButtons;
     QVBoxLayout *layout;
     int answerCount;
+     void deepCopy(const Quiz &other);
 };
 
 #endif // QUIZ_H

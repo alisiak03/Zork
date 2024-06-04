@@ -8,6 +8,8 @@
 #include <QStringList>
 #include <QMessageBox>
 
+int globalButtonClickCount = 0;
+
 MainWindow::MainWindow(QWidget *parent)
         : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this)), exitButton(new QPushButton("Exit Game", this))
 { qDebug() << "MainWindow constructor called";
@@ -141,9 +143,11 @@ void MainWindow::updateButtons() {
 }
 
 void MainWindow::handleButton1Clicked() {
-    qDebug() << "Button 1 clicked";
+    qDebug() << "Button 1 clicked" <<globalButtonClickCount;
+    ++globalButtonClickCount;
 }
 
 void MainWindow::handleButton2Clicked() {
-    qDebug() << "Button 2 clicked";
+    qDebug() << "Button 2 clicked" <<globalButtonClickCount;
+    ++globalButtonClickCount;
 }

@@ -13,7 +13,7 @@ class TextAnimation : public QObject {
 
 public:
     explicit TextAnimation(QObject *parent = nullptr);
-    void startAnimation(QLabel *label, const QString &text, int interval = 100 );
+    void startAnimation(QLabel *label, const QString &text, int interval = 50 );
     void stopAnimation();
 
 private slots:

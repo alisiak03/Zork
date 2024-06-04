@@ -18,8 +18,6 @@ public:
     void addItem(const T &item);
     bool hasItem(const T &item) const;
     bool saveToFile(const QString &filename) const;
-    bool loadFromFile(const QString &filename);
-
 private:
     std::set<T> items;
 
@@ -52,25 +50,7 @@ bool Inventory<T>::saveToFile(const QString &filename) const {
     return true;
 }
 
-template<typename T>
-bool Inventory<T>::loadFromFile(const QString &filename) {
-    QFile file(filename);
-    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Failed to open file for reading:" << filename;
-        return false;
-    }
 
-    QTextStream in(&file);
-    items.clear();
-    while (!in.atEnd()) {
-        QString line = in.readLine();
-        items.insert(line);
-    }
-
-    file.close();
-    qDebug() << "Inventory loaded from file:" << filename;
-    return true;
-}
 
 
 #endif //ZORK_INVENTORY_H

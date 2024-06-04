@@ -22,6 +22,8 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+extern int globalButtonClickCount;
+
 class MainWindow : public QMainWindow, public ButtonStyling{
 Q_OBJECT
 
