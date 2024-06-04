@@ -38,6 +38,8 @@ add_executable(Zork main.cpp
         ButtonStyling.h
         FutureFeature.cpp
         FutureFeature.h
+        GameUtilities.cpp
+        GameUtilities.h
 )
 target_link_libraries(Zork
         Qt5::Core

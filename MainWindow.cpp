@@ -39,14 +39,8 @@ void MainWindow::initialiseIntro() {
     QPixmap introPixmap("/Users/alisiakazimierek/MyRepos/Zork/Intro.png");
     ui->introImageLabel->setPixmap(introPixmap.scaled(ui->introImageLabel->width(),ui->introImageLabel->height(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
-    ui->introTextLabel->setText("Welcome to your Pirate Adventure!! Prepare yourself!!");
+    ui->introTextLabel->setText(GameUtilities::getFormattedText("Welcome to your Pirate Adventure!! Prepare yourself!!"));
 
-    ui->introTextLabel->setStyleSheet(
-            "QLabel {"
-            "font-size: 24px;"
-            "font-family: Papyrus;"
-            "}"
-    );
     ui->roomLabel->hide();
     ui->button1->hide();
     ui->button2->hide();
@@ -108,6 +102,7 @@ void MainWindow::updateRoom() {
     if(roomNav->getCurrentRoom()->getName() =="Won"){
         exitButton->setGeometry(300,400,100,50);
         exitButton->show();
+        GameUtilities::showMessage("Congratulations! You're part of the crew");
     }else{
         exitButton->hide();
     }
