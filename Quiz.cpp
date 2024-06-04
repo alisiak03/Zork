@@ -48,7 +48,7 @@ Quiz::Quiz(const Quiz &other) {
     deepCopy(other);
 }
 
-//copy assignment operator
+
 Quiz& Quiz::operator=(const Quiz &other) {
     if (this != &other) {
         delete[] answers;
@@ -98,7 +98,7 @@ void Quiz::deepCopy(const Quiz &other) {
     retryButton->hide();
 }
 
-//shallow copy
+// shallow copy constructor
 Quiz::Quiz(Quiz &&other) noexcept
         : QDialog(other.parentWidget()), question(std::move(other.question)), answers(other.answers), correctIndex(other.correctIndex),
           questionLabel(other.questionLabel), resultLabel(other.resultLabel), retryButton(other.retryButton),
@@ -111,7 +111,7 @@ Quiz::Quiz(Quiz &&other) noexcept
     other.layout = nullptr;
 }
 
-// shallow copy
+
 Quiz& Quiz::operator=(Quiz &&other) noexcept {
     if (this != &other) {
         delete[] answers;

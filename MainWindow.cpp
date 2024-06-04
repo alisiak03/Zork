@@ -11,8 +11,11 @@
 int globalButtonClickCount = 0;
 
 MainWindow::MainWindow(QWidget *parent)
-        : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this)), exitButton(new QPushButton("Exit Game", this))
-{ qDebug() << "MainWindow constructor called";
+        : QMainWindow(parent), ui(new Ui::MainWindow), roomNav(new RoomNav), textAnimator(new TextAnimation(this)),
+        exitButton(new QPushButton("Exit Game", this))
+        {
+
+    qDebug() << "MainWindow constructor called";
 
     ui->setupUi(this);
     ui->centralwidget->setStyleSheet("background-color: #C19F6F ");
