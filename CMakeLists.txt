@@ -33,7 +33,12 @@ add_executable(Zork main.cpp
         Treasure.h
         ClickableLabel.cpp
         ClickableLabel.h
-        Inventory.h)
+        Inventory.h
+        ButtonStyling.cpp
+        ButtonStyling.h
+        FutureFeature.cpp
+        FutureFeature.h
+)
 target_link_libraries(Zork
         Qt5::Core
         Qt5::Gui

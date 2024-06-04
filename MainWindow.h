@@ -10,6 +10,8 @@
 #include "TextAnimation.h"
 #include "Quiz.h"
 #include "ClickableLabel.h"
+#include "ButtonStyling.h"
+#include "FutureFeature.h"
 
 
 
@@ -17,7 +19,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow, public ButtonStyling, public FutureFeature{
 Q_OBJECT
 
 public:

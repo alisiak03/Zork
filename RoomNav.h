@@ -1,16 +1,13 @@
-//
-// Created by Alisia Kazimierek on 14/05/2024.
-//
-
 #ifndef ZORK_ROOMNAV_H
 #define ZORK_ROOMNAV_H
+
 #include "Room.h"
 #include <QMap>
-#include<QString>
+#include <QString>
 
 class RoomNav {
 public:
-    RoomNav();
+    RoomNav(); // Default constructor
     Room* getCurrentRoom() const;
     void goToRoom(const QString &direction);
 
@@ -19,5 +16,4 @@ private:
     Room* currentRoom;
 };
 
-
-#endif //ZORK_ROOMNAV_H
+#endif // ZORK_ROOMNAV_H

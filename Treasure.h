@@ -31,7 +31,6 @@ private:
     Inventory<QString> inventory;
 
     void saveInventory();
-    void loadInventory();
     void resetInventory();
 
 };

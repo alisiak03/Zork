@@ -81,21 +81,12 @@ void Treasure::updateRoom() {
     if(roomNav->getCurrentRoom()->getName() != "treasureRoom" && roomNav->getCurrentRoom()->getName() != "captainRoom"){
         bagLabel->hide();
     }
-    if(roomNav->getCurrentRoom()->getName() == "Won"){
-        exitButton->setGeometry(300,400,100,50);
-        exitButton->show();
-    }else{
-        exitButton->hide();
-    }
+
 }
 
 void Treasure::resetInventory() {
     inventory = Inventory<QString>();
     saveInventory();
-}
-
-void Treasure::loadInventory() {
-    inventory.loadFromFile("/Users/alisiakazimierek/MyRepos/Zork/InventoryBag.txt");
 }
 
 void Treasure::saveInventory() {

@@ -14,28 +14,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->setupUi(this);
     ui->centralwidget->setStyleSheet("background-color: #C19F6F ");
-    ui->button1->setStyleSheet(
-            "QPushButton {"
-            "background-color: #FFD700;"
-            "border: 2px solid #000;"
-            "border-radius: 15px;"
-            "}"
-    );
-    ui->button2->setStyleSheet(
-            "QPushButton {"
-            "background-color: #FFD700;"
-            "border: 2px solid #000;"
-            "border-radius: 15px;"
-            "}"
-    );
+    ui->button1->setStyleSheet(getButton1Style());
+    ui->button2->setStyleSheet(getButton2Style());
 
-    ui->quizButton->setStyleSheet(
-            "QPushButton {"
-            "background-color: #6FB572 "
-            "border: 2px solid #000;"
-            "border-radius: 15px;"
-            "}"
-    );
+    ui->quizButton->setStyleSheet(getQuizButtonStyle());
 
     initialiseIntro();
     qDebug() << "Connecting buttons";
@@ -64,7 +46,7 @@ void MainWindow::initialiseIntro() {
             "font-size: 24px;"
             "font-family: Papyrus;"
             "}"
-            );
+    );
     ui->roomLabel->hide();
     ui->button1->hide();
     ui->button2->hide();
@@ -73,6 +55,7 @@ void MainWindow::initialiseIntro() {
     ui->introImageLabel->show();
     ui->introTextLabel->show();
     ui->startButton->show();
+    someFutureFeature();
 }
 
 void MainWindow::handleStartButtonClicked() {
@@ -117,7 +100,7 @@ void MainWindow::updateRoom() {
     if (roomNav->getCurrentRoom()->getName() == "start") {
         ui->quizButton->show();
         ui->quizButton->setEnabled(true);
-       textAnimator->startAnimation(ui->animatedTextLabel, "You want to become part of a pirate crew. \n You are locked in the ships prison as part of a test. \nTo get out of prison, pass the quiz ");
+        textAnimator->startAnimation(ui->animatedTextLabel, "You want to become part of a pirate crew. \n You are locked in the ships prison as part of a test. \nTo get out of prison, pass the quiz ");
     }else{
         ui->quizButton->hide();
         textAnimator->stopAnimation();

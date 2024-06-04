@@ -31,4 +31,4 @@ private:
     int answerCount;
 };
 
-#endif QUIZ_H
+#endif // QUIZ_H
