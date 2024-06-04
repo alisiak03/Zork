@@ -14,6 +14,7 @@
 #include "FutureFeature.h"
 #include "GameUtilities.h"
 #include "Exeception.h"
+#include "DerviedFutureFeature.h"
 
 
 
@@ -21,7 +22,7 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow, public ButtonStyling, public FutureFeature{
+class MainWindow : public QMainWindow, public ButtonStyling{
 Q_OBJECT
 
 public:

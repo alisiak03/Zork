@@ -53,7 +53,7 @@ void MainWindow::initialiseIntro() {
     ui->introImageLabel->show();
     ui->introTextLabel->show();
     ui->startButton->show();
-    someFutureFeature();
+
 }
 
 void MainWindow::handleStartButtonClicked() {

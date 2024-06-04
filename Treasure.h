@@ -9,12 +9,15 @@
 #include "ClickableLabel.h"
 #include "Inventory.h"
 
+
+
 class Treasure : public MainWindow {
     Q_OBJECT
 
 public:
     explicit Treasure(QWidget *parent = nullptr);
-    ~Treasure();
+    ~Treasure() override;
+
 
 private slots:
     void handleTreasureChestClicked();

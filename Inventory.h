@@ -10,13 +10,13 @@
 #include <QFile>
 #include <QTextStream>
 #include <QDebug>
+
 template<typename T>
 class Inventory {
 public:
     Inventory() = default;
     void addItem(const T &item);
     bool hasItem(const T &item) const;
-    void removeItem(const T &item);
     bool saveToFile(const QString &filename) const;
     bool loadFromFile(const QString &filename);
 
@@ -34,10 +34,6 @@ bool Inventory<T>::hasItem(const T &item) const{
     return items.find(item) != items.end();
 }
 
-template<typename T>
-void Inventory<T>::removeItem(const T &item) {
-    items.erase(item);
-}
 template<typename T>
 bool Inventory<T>::saveToFile(const QString &filename) const {
     QFile file(filename);

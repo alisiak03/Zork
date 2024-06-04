@@ -11,7 +11,7 @@ public:
     FutureFeature() = default;
     virtual ~FutureFeature() = default;
 
-    void someFutureFeature();
+    virtual void someFutureFeature() = 0;
 };
 
 
