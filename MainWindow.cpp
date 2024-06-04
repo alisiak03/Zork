@@ -16,10 +16,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->centralwidget->setStyleSheet("background-color: #C19F6F ");
     ui->button1->setStyleSheet(getButton1Style());
     ui->button2->setStyleSheet(getButton2Style());
-
     ui->quizButton->setStyleSheet(getQuizButtonStyle());
 
-    initialiseIntro();
+    try {
+        initialiseIntro();
+    }catch(const Exeception& e){
+        QMessageBox::critical(this, "Error", e.what());
+    }
+
     qDebug() << "Connecting buttons";
     connect(ui->button1, &QPushButton::clicked, this, &MainWindow::handleButton1Clicked);
     connect(ui->button2, &QPushButton::clicked, this, &MainWindow::handleButton2Clicked);

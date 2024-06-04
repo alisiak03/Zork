@@ -40,6 +40,7 @@ add_executable(Zork main.cpp
         FutureFeature.h
         GameUtilities.cpp
         GameUtilities.h
+        Exeception.h
 )
 target_link_libraries(Zork
         Qt5::Core
